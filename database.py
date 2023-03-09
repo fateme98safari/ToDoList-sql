@@ -5,9 +5,9 @@ class Datebase:
     def __init__(self):
         self.con=sqlite3.connect("todo_list.db")
         self.cursor=self.con.cursor()
-        # self.cursor.execute("ALTER TABLE tasks ADD Priority INTEGER")
-        # self.con.commit()
-        # self.cursor.close()
+        self.cursor.execute("ALTER TABLE tasks ADD Priority INTEGER")
+        self.con.commit()
+        self.cursor.close()
     
 
     def get_tasks(self):

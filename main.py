@@ -37,8 +37,8 @@ class MainWindow(QMainWindow):
             self.ui.gl_tasks.addWidget(new_btn , i ,3)
             self.ui.gl_tasks.addWidget(new_date_time, i ,2)
 
-            # if tasks[i][4]==1:
-            #     new_label.setStyleSheet("color: rgb(61, 0, 0);")
+            if tasks[i][4]==1:
+                new_label.setStyleSheet("color: rgb(61, 0, 0);")
 
     def new_task(self):
         new_title=self.ui.tb_new_task_title.text()
